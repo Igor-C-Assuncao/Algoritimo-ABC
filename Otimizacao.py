@@ -6,9 +6,7 @@ class OptimizationProblem:
         self.lower_bound = lower_bound
         self.upper_bound = upper_bound
 
-    def objective_function(self, x):
-        raise NotImplementedError("Subclasses must implement objective_function method")
-
+    
     def random_solution(self):
         return self.lower_bound + np.random.rand(self.dimension) * (self.upper_bound - self.lower_bound)
 
